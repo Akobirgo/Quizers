@@ -1,0 +1,20 @@
+<navbar class="w-100 p-relative">
+    <div class="d-none navbar-scroll bg-blur text-secondary">
+        <div class="container d-flex justify-content-between align-items-center">
+            <%- include('brand', { isSmall: true}) %>
+            <% if (isQuiz) { %>
+                <%- include('info') %>
+            <% } %>
+            <button class="btn-menu ms-1">
+                <%- include('../components/cog-svg') %>
+            </button>
+        </div>
+    </div>
+    <div class="d-flex justify-content-between align-items-center">
+        <%- include('brand', { isSmall: false }) %>
+        <button class="btn-menu btn-menu-main">
+            <%- include('../components/cog-svg') %>
+        </button>
+    </div>
+    <%- include('menu-toggle') %>
+</navbar>

@@ -1,0 +1,29 @@
+{
+  "name": "quizer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "Akobir",
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "connect-flash": "^0.1.1",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.21.0",
+    "express-session": "^1.18.0",
+    "joi": "^17.13.3",
+    "method-override": "^3.0.0",
+    "mongodb": "^6.9.0",
+    "mongoose": "^8.6.3",
+    "morgan": "^1.10.0",
+    "sass": "^1.78.0",
+    "uuid": "^10.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.4"
+  }
+}

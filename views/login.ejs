@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('partials/head', { title: 'Login' }) %>
+</head>
+
+<body class="bg-image">
+    <%- include('partials/header', { isQuiz: false }) %>
+        <main class="container main min-vh-100-within d-flex d-flex-col justify-content-center ">
+
+            <!-- Main content goes here -->
+            <form action="/login?_method=POST" method="POST" class="m-8 p-8 form" autocomplete="off">
+                <h1 class="text-center mb-4">Sign in</h1>
+
+                <div class="mb-4">
+                    <label for="username" class="form-text pb-1">username</label>
+                    <input type="text" id="username" class="form-control" name="username" placeholder="username"
+                        required>
+                </div>
+
+                <div class="mb-2">
+                    <label for="password" class="form-text pb-1">Password</label>
+                    <input type="password" id="password" class="form-control" name="password" placeholder="password"
+                        required>
+                </div>
+
+                <a class="link fs-small d-block text-right" href="/signup">Create a new account</a>
+
+                <div class="d-flex justify-content-end mt-8">
+                    <a href="/" class="btn d-block">Home</a>
+                    <button type="reset" class="btn d-block ms-2">Clear</button>
+                    <button type="submit" class="btn btn-primary d-block ms-2">Login</button>
+                </div>
+            </form>
+
+            <%- include('partials/flash') %>
+            <%- include('partials/footer') %>
+        </main>
+</body>
+
+</html>

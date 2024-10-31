@@ -1,0 +1,130 @@
+.container {
+  width: 100%;
+  max-width: 576px;
+  margin-inline: auto;
+  padding-inline: 2rem;
+}
+
+.bg-image {
+  position: relative;
+  &::after {
+    content: "";
+    position: fixed;
+    z-index: -1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: center / cover no-repeat url($bg-mobile-image);
+    @media screen and (min-width: 576px) {
+      background: center / cover no-repeat url($bg-desktop-image);
+    }
+  }
+}
+
+.logo {
+  fill: $color-primary;
+  margin-block: 1rem;
+  &:hover circle {
+    animation-play-state: paused;
+  }
+  & circle {
+    fill: $color-light;
+    animation-name: signal;
+    animation-timing-function: linear;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+  & circle:first-of-type {
+    animation-delay: 1s;
+  }
+}
+
+@keyframes signal {
+  0% {
+    fill: $color-light;
+  }
+  50% {
+    fill: $color-primary;
+  }
+}
+
+.fill-primary {
+  fill: $color-primary;
+}
+
+.fill-light {
+  fill: $color-light;
+}
+
+.bg-light {
+  background-color: $color-light !important;
+}
+
+.bg-primary {
+  background-color: $color-primary !important;
+}
+
+.bg-primary-light {
+  background-color: $color-primary-light !important;
+}
+
+.bg-secondary {
+  background-color: $color-secondary !important;
+}
+
+.bg-blur {
+  backdrop-filter: blur(5px);
+  @supports not (backdrop-filter: blur(5px)) {
+    background-color: $color-transparent-black;
+  }
+}
+
+.link {
+  text-decoration: underline solid transparent 0.2rem;
+  color: $color-primary;
+  transition: text-decoration-color $default-animation-duration ease-in-out;
+  &:hover {
+    text-decoration-color: $color-primary;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.text-light {
+  color: $color-light !important;
+}
+
+.text-secondary {
+  color: $color-secondary !important;
+}
+
+.text-primary {
+  color: $color-primary;
+}
+
+.min-vh-100 {
+  min-height: 100vh;
+}
+
+.min-vh-100-within {
+  min-height: calc(100vh - 68px);
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.correct {
+  border: 0.5rem solid $color-success !important;
+}
+
+.incorrect {
+  border: 0.5rem solid $color-danger !important;
+}

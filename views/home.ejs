@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('partials/head', { title: 'Quizer Homepage' }) %>
+</head>
+
+<body class="bg-image">
+    <main class="container main min-vh-100 d-flex d-flex-col justify-content-center align-items-center text-center pt-8">
+        <button class="btn-menu btn-menu-main ms-auto">
+            <%- include('components/cog-svg') %>
+        </button>
+        <%- include('partials/menu-toggle') %>
+        <%- include('components/logo-svg') %>
+        <h1 class="brand">QUIZER</h1>
+        <p class="main__description mt-6">Test your front-end knowledge by multiple choice questions</p>
+        <a href="/quiz" class="btn btn-lg main__button">Start a quiz</a>
+        <%- include('partials/flash') %>
+        <%- include('partials/footer') %>
+    </main>
+</body>
+
+</html>

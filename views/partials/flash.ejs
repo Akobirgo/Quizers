@@ -1,0 +1,18 @@
+<% if (String(error)) { %>
+    <div class="modal">
+        <%- include('../components/close-icon-svg') %>
+        <%- include('../components/error-icon-svg') %>
+        <p class="fs-small">
+            <%= error %>
+        </p>
+    </div>
+<% } %>
+<% if (String(success)) { %>
+    <div class="modal">
+        <%- include('../components/close-icon-svg') %>
+        <%- include('../components/success-icon-svg') %>
+        <p class="fs-small">
+            <%= success %>
+        </p>
+    </div>
+<% } %>
